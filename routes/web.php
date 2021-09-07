@@ -23,4 +23,5 @@ Route::get('/', function() { return "Coming Soon 👀"; })->name('home');
 //Route::get('/apply', function() { return "apply"; })->name('apply');
 //Route::get('/donate', function() { return "donate"; })->name('donate');
 
+
 //Auth::routes(['register' => false]);
