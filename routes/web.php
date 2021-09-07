@@ -15,11 +15,12 @@ use App\Http\Controllers\Pages\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/about', function() { return "about"; })->name('about');
-Route::get('/routes', function() { return "routes"; })->name('routes');
-Route::get('/slots', function() { return "slots"; })->name('slots');
-Route::get('/apply', function() { return "apply"; })->name('apply');
-Route::get('/donate', function() { return "donate"; })->name('donate');
+//Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', function() { return "Coming Soon 👀"; })->name('home');
+//Route::get('/about', function() { return "about"; })->name('about');
+//Route::get('/routes', function() { return "routes"; })->name('routes');
+//Route::get('/slots', function() { return "slots"; })->name('slots');
+//Route::get('/apply', function() { return "apply"; })->name('apply');
+//Route::get('/donate', function() { return "donate"; })->name('donate');
 
-Auth::routes(['register' => false]);
+//Auth::routes(['register' => false]);
