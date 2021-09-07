@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104.077" height="65.28" viewBox="0 0 104.077 65.28">
+    <g id="Group_1" transform="translate(-112.739 -328.081)">
+        <g id="Rectangle_17" transform="matrix(0.996, 0.087, -0.087, 0.996, 119.422, 332.857)" fill="#0069b4" stroke="#233326" stroke-width="1">
+            <rect width="97.766" height="52.182" stroke="none"/>
+            <rect x="0.5" y="0.5" width="96.766" height="51.182" fill="none"/>
+        </g>
+        <g id="Rectangle_16" transform="translate(112.739 341.687) rotate(-8)" fill="#fdc300" stroke="#233326" stroke-width="1">
+            <rect width="97.766" height="52.182" stroke="none"/>
+            <rect x="0.5" y="0.5" width="96.766" height="51.182" fill="none"/>
+        </g>
+    </g>
+    <text id="Donate" transform="translate(22.538 38.14)" font-size="18" font-family="Nunito-Regular, Nunito"><tspan x="0" y="0">Donate</tspan></text>
+</svg>

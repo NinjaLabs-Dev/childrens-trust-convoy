@@ -1,0 +1,155 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-container {
+    padding: .5rem 1rem 0 .5rem;
+
+    .branding {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            max-height: 5rem;
+        }
+    }
+
+    .navbar-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-items {
+            display: flex;
+            align-items: center;
+
+            .nav-item {
+                padding: 0 .5rem;
+                color: #000;
+                font-size: 1.25em;
+                transition: .25s all ease-in-out;
+
+                &.cta {
+                    padding: .25em;
+                    border: .2em solid red;
+                    border-radius: .5em;
+                    background-color: #e09492;
+                }
+
+                &.active {
+                    color: #0069b4;
+                    font-weight: 600;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    color: #0069b4;
+                }
+            }
+        }
+
+        .nav-end {
+            display: flex;
+            align-items: center;
+
+            .cta {
+                .donate-button {
+                    margin-left: .5em;
+                    max-height: 3em;
+                }
+            }
+        }
+    }
+
+    .navbar-bottom {
+        margin-top: .5rem;
+
+        .bar {
+            height: .5rem;
+        }
+
+        .yellow {
+            background-color: #fdc300;
+        }
+
+        .blue {
+            background-color: #0069b4;
+        }
+    }
+}
+
+.countdown-container {
+    text-align: center;
+    padding: 1em 0;
+    background: #0069b4;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.home-head-container {
+    background: #fdc300;
+    min-height: 40vh;
+
+    .content-left, .content-right {
+        padding: 2.5em 0 4em 2.5em;
+    }
+
+    .content-left {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 5em;
+        }
+
+        p {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 2em;
+        }
+
+        .action-buttons {
+            .primary-button {
+                background-color: #0069b4;
+
+                &:hover {
+                    background-color: #0072c4;
+                }
+            }
+
+            .secondary-button {
+                background-color: #008721;
+
+                &:hover {
+                    background-color: #0aa02f;
+                }
+            }
+
+            .button {
+                border: .15em solid #000;
+                font-weight: 400;
+                padding: .375rem 0.75rem;
+                color: #ffffff;
+                transition: .25s all ease-in-out;
+                transform: rotateZ(0);
+                -webkit-backface-visibility: hidden;
+
+                &:hover {
+                    transform: rotateZ(-2.5deg);
+                }
+            }
+        }
+    }
+
+    .content-right {
+        min-height: 100%;
+    }
+}
