@@ -18,11 +18,21 @@ class DonationObserver
         $formatter = new \NumberFormatter('en_US', \NumberFormatter::CURRENCY);
         $donationAmount = $formatter->formatCurrency($donation->donation_amount, $donation->donation_country_code);
 
+        if($donation->donation_message !== 'No Message') {
+            if(strlen($donation->donation_message) > 1000) {
+                $description = substr($donation->donation_message, 0, 1000) . ' . . .' ;
+            } else {
+                $description = $donation->donation_message;
+            }
+        } else {
+            $description = 'No message set!';
+        }
+
         $data = [
             'embeds' => [
                 [
                     'title' => $donation->donation_name . ' - ' . $donationAmount,
-                    'description' => $donation->donation_message !== 'No Message' ? substr($donation->donation_message, 0, 1000) . ' . . .' : 'No message set!',
+                    'description' => $description,
                     'color' => 3720732,
                     'footer' => [
                         'text' => 'Thanks for your support <3 - Total Raised £' . $donation->raisedTotal,
