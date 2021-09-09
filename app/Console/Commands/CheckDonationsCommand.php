@@ -28,33 +28,41 @@ class CheckDonationsCommand extends Command
             $page = $pageInfo->json();
             $donationPos = null;
 
-            foreach ($donations["donations"] as $i => $donation) {
-                $donoCheck = Donation::where('donation_id', $donation['id'])->get();
 
-                if(!$donoCheck->count()) {
-                    $donationPos = $i;
+            $donationIds = [];
+
+            foreach ($donations["donations"] as $donation) {
+                $donationIds[] = $donation["id"];
+            }
+
+            $donationsCheck = Donation::whereIn('donation_id', $donationIds)->get()->pluck('donation_id');
+            $donations = $donations["donations"];
+
+            foreach ($donationsCheck as $donation) {
+                $donationSearch = array_search($donation, $donationIds, true);
+
+
+                if ($donationSearch) {
+                    array_splice($donations, $donationSearch, 1);
                 }
             }
 
+            foreach(array_reverse($donations) as $donationData) {
+                $donationTime = str_replace(array('/Date(', '+0000)/'), '', $donationData['donationDate']);
+                $donationTime = Carbon::createFromTimestamp($donationTime / 1000);
 
-            if($donationPos !== null) {
-                for ($i = $donationPos; $i >= 0; $i--) {
-                    $donationData = $donations["donations"][$i];
+                $donation = new Donation;
+                $donation->donation_id = $donationData['id'];
+                $donation->donation_name = $donationData['donorDisplayName'];
+                $donation->donation_amount = round((float)$donationData['donorLocalAmount'], 2);
+                $donation->donation_country_code = $donationData['donorLocalCurrencyCode'];
+                $donation->donation_message = empty($donationData['message']) ? 'No Message' : $donationData['message'];
+                $donation->raisedPercent = $page['totalRaisedPercentageOfFundraisingTarget'];
+                $donation->raisedTotal = $page['grandTotalRaisedExcludingGiftAid'];
+                $donation->created_at = $donationTime->toISOString();
+                $donation->save();
 
-                    $donationTime = str_replace(array('/Date(', '+0000)/'), '', $donationData['donationDate']);
-                    $donationTime = Carbon::createFromTimestamp($donationTime / 1000);
-
-                    $donation = new Donation;
-                    $donation->donation_id = $donationData['id'];
-                    $donation->donation_name = $donationData['donorDisplayName'];
-                    $donation->donation_amount = round((float)$donationData['donorLocalAmount'], 2);
-                    $donation->donation_country_code = $donationData['donorLocalCurrencyCode'];
-                    $donation->donation_message = empty($donationData['message']) ? 'No Message' : $donationData['message'];
-                    $donation->raisedPercent = $page['totalRaisedPercentageOfFundraisingTarget'];
-                    $donation->raisedTotal = $page['grandTotalRaisedExcludingGiftAid'];
-                    $donation->created_at = $donationTime->toISOString();
-                    $donation->save();
-                }
+                sleep(5);
             }
 
 

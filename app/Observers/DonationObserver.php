@@ -5,6 +5,7 @@ namespace App\Observers;
 use App\Models\Donation;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class DonationObserver
 {
@@ -35,16 +36,20 @@ class DonationObserver
                     'description' => $description,
                     'color' => 3720732,
                     'footer' => [
-                        'text' => 'Thanks for your support <3 - Total Raised £' . $donation->raisedTotal,
+                        'text' => 'Thanks for your support 💙 - Total Raised £' . $donation->raisedTotal,
                     ],
                     'timestamp' => Carbon::parse($donation->created_at)->toDateTimeString()
                 ]
             ]
         ];
 
-        Http::withHeaders([
+        $r = Http::withHeaders([
             'Content-Type' => 'application/json'
         ])->post(config('app.just_giving_updates_webhook'), $data);
+
+        if($r->failed()) {
+            Log::error('ERROR ' . $donation->donation_name . ' == ' . json_encode($r->json()));
+        }
 
     }
 
