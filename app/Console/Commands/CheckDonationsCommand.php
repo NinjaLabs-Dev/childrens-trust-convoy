@@ -38,11 +38,11 @@ class CheckDonationsCommand extends Command
             $donationsCheck = Donation::whereIn('donation_id', $donationIds)->get()->pluck('donation_id');
             $donations = $donations["donations"];
 
-            foreach ($donationsCheck as $donation) {
+            foreach ($donationsCheck as $i => $donation) {
                 $donationSearch = array_search($donation, $donationIds, true);
 
 
-                if ($donationSearch) {
+                if ($donationSearch !== false) {
                     array_splice($donations, $donationSearch, 1);
                 }
             }
