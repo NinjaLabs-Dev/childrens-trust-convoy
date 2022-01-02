@@ -9,7 +9,7 @@
                 <div class="col-xl-6 content-left">
                     <div class="titles text-center my-2">
                         <h2>Convoy Routes</h2>
-                        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed vehicula quam, sit amet hendrerit ipsum. Mauris a massa bibendum purus molestie pulvinar in ut odio.</p>
+                        <p class="mt-2">Below is all of our 9 routes over the duration of the convoy. We're travelling through every DLC there is in game, bringing some amazing scenery, and some brilliant roads for you to experience over an entire 24 hours.</p>
                     </div>
                     <div class="action-buttons d-flex justify-content-center align-items-center mb-4">
                         <a href="{{ route('donate') }}">
