@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('pages.resources.views.layouts.app')
 
 @section('title', 'Staff Login')
 
