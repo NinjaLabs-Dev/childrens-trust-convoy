@@ -33,6 +33,8 @@ Route::get('/slots', [SlotController::class, 'index'])->name('slots');
 //Route::get('/slot/{slot:number}/image', [SlotImageController::class, 'index'])->name('slot-image');
 Route::get('/apply', [ApplyController::class, 'index'])->name('apply');
 Route::get('/donate', [DonateController::class, 'index'])->name('donate');
+Route::redirect('/event', 'https://truckersmp.com/events/3553');
+Route::redirect('/discord', 'https://discord.gg/hbwQ6hHvDT');
 
 Route::get('/apply/{application:route}', [ApplyController::class, 'show'])->name('application');
 
