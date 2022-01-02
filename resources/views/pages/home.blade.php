@@ -46,6 +46,8 @@
                     <donate-up-sell route="{{ route('donate') }}"></donate-up-sell>
                 </div>
             </div>
+
+            <not-affiliated class="mt-4"></not-affiliated>
         </div>
     </div>
 @endsection
