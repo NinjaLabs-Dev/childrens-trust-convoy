@@ -81,7 +81,7 @@ class ApplicationController extends Controller
         }
 
 
-        Http::post('https://discord.com/api/webhooks/834069371847573604/ZPBzZM6p0Fi-orKz9E6wn7CklN_itmxYcAB0QJmiESwk1H2zdqULB9A4pvCQywVpHPPa', [
+        Http::post('https://discord.com/api/webhooks/926964313837690940/s9tqDH42UK0_L5GncBfhfqlsTU3vaURe2_nYz8Rg25DxVX6Rr2JerN7hOCK7zs97h145', [
             "content" => null,
             "embeds" => [
                 [

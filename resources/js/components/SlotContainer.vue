@@ -34,7 +34,7 @@ export default {
             if(slot.public) {
                 return "Public"
             } else if(this.slotTaken(slot)) {
-                return slot.vtc.name
+                return slot.vtc
             }
 
             return `Slot ${slot.number}`

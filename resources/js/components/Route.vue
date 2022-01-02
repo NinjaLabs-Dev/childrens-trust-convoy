@@ -7,7 +7,7 @@
             <div class="body">
                 <p><b>Start</b>: {{ selectedRoute.start }} - {{ convertTime(selectedRoute.start_time) }}</p>
                 <p><b>End</b>: {{ selectedRoute.end }}</p>
-                <a :href="`/route/${selectedRoute.number}/image`" target="_blank">
+                <a :href="selectedRoute.image" target="_blank">
                     <el-button type="success" size="small" class="w-100">View Route</el-button>
                 </a>
             </div>
