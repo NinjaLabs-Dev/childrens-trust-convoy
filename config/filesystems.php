@@ -52,13 +52,19 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
+
         'scaleway' => [
             'driver' => 's3',
             'key' => env('SCALEWAY_KEY'),
             'secret' => env('SCALEWAY_SECRET'),
             'region' => env('SCALEWAY_REGION'),
             'bucket' => env('SCALEWAY_BUCKET'),
-            'endpoint' => env('SCALEWAY_ENDPOINT')
+            'endpoint' => env('SCALEWAY_ENDPOINT'),
+//            'cache' => [
+//                'store' => 'memcached',
+//                'expire' => 600,
+//                'prefix' => 'cache-prefix',
+//            ],
         ]
     ],
 

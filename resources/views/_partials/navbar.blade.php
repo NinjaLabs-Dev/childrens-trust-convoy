@@ -1,16 +1,15 @@
 <div class="row">
     <div class="col-xl-12 p-0">
         <nav class="navbar-container">
-            <div class="navbar-top">
-                <div class="branding">
+            <div class="navbar-top row">
+                <div class="branding col-xl-4">
                     <img class="logo" src="{{ asset('logo.svg') }}" alt="Children's Trust Logo">
 
-                    @if($countdownBar ?? true)
-                        <div class="countdown ml-4">
-                            {{-- Vue Element --}}
-                            <p class="mb-0">Event Countdown: </p>
-                            <p class="mb-0">1 Month 2 Days 4 Hours</p>
-                        </div>
+                    @if($next_event ?? false)
+                        <event-countdown
+                            class="ml-2"
+                            :event="{{ json_encode($next_event) }}">
+                        </event-countdown>
                     @endif
                 </div>
 
@@ -18,10 +17,9 @@
 {{--                    <span class="navbar-toggler-icon"></span>--}}
 {{--                </button>--}}
 
-                <div class="nav-end">
+                <div class="nav-end col-xl-8 justify-content-end">
                     <div class="nav-items">
                         <x-nav-item name="Home" route="home"></x-nav-item>
-                        <x-nav-item name="About" route="about"></x-nav-item>
                         <x-nav-item name="Routes" route="routes"></x-nav-item>
                         <x-nav-item name="Slots" route="slots"></x-nav-item>
                         <x-nav-item name="Apply" route="apply"></x-nav-item>
@@ -31,6 +29,12 @@
                             <img src="{{ asset('donate.svg') }}" alt="Yellow and Blue rectangles positions below donate button">
                         </a>
                     </div>
+
+                    @auth
+                        <form action="/logout" method="POST">
+                            <button class="btn btn-danger mx-4" type="submit">Logout</button>
+                        </form>
+                    @endauth
                 </div>
             </div>
 

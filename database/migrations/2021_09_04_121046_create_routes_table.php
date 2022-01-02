@@ -14,7 +14,7 @@ class CreateRoutesTable extends Migration
             $table->string('start');
             $table->bigInteger('start_time');
             $table->string('end');
-            $table->foreignId('image')->references('id')->on('route_images')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->string('image')->default('https://cdn.ninjalabs.dev/Wmp0V');
             $table->boolean('truckfest')->default(false);
             $table->timestamps();
         });

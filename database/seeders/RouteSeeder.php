@@ -14,7 +14,7 @@ class RouteSeeder extends Seeder
      */
     public function run()
     {
-        $routes = collect([
+        $routes = [
             [
                 'number' => 0,
                 'start' => 'Stavanger',
@@ -86,7 +86,7 @@ class RouteSeeder extends Seeder
                 'end' => 'Cordoba',
                 'image' => 1
             ],
-        ]);
+        ];
 
         foreach ($routes as $route) {
             $r = new Route;

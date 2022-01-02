@@ -1,0 +1,26 @@
+.slot-outer-container {
+    .slot {
+        .slot-image {
+            width: 100%;
+            display: block;
+        }
+
+        .img-container {
+            width: 100%;
+            min-height: 335px;
+        }
+
+        .bottom {
+            margin-top: 13px;
+            line-height: 12px;
+        }
+
+        .taken {
+            color: #2cab4c;
+        }
+
+        .not-taken {
+            opacity: .5;
+        }
+    }
+}

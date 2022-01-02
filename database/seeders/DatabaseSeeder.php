@@ -16,5 +16,9 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(RouteImageSeeder::class);
         $this->call(RouteSeeder::class);
+        $this->call(SlotImageSeeder::class);
+        $this->call(SlotSeeder::class);
+        $this->call(VTCSeeder::class);
+        $this->call(VTCContactSeeder::class);
     }
 }
