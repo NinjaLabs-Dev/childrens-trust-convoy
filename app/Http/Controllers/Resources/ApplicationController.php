@@ -19,7 +19,7 @@ class ApplicationController extends Controller
     }
 
     public function store(Request $request, Application $application) {
-        if($application->end >= Carbon::now()->timestamp) {
+        if($application->end <= Carbon::now()->timestamp) {
             abort(404);
         }
 
