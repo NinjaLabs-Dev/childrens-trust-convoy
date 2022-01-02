@@ -13,7 +13,7 @@ class RouteManagementController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(Request $request, Route $route)
+    public function update(Request $request, Route $route)
     {
         $route->start = $request->start;
         $route->end = $request->end;

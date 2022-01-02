@@ -13,7 +13,7 @@ class SlotManagementController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(Request $request, Slot $slot)
+    public function update(Request $request, Slot $slot)
     {
         $slot->capacity = $request->capacity;
         $slot->vacant = $request->vacant;
