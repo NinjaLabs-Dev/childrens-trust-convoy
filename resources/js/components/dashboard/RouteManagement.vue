@@ -63,7 +63,7 @@ export default {
             this.route = this.routes[i].id;
         },
         submit: function() {
-            axios.post('/api/route-management/' + this.slot, this.form).then(res => {
+            axios.post('/api/route-management/' + this.route, this.form).then(res => {
                 this.$message.success('Updated');
             })
         }
