@@ -36,6 +36,7 @@ Route::get('/donate', [DonateController::class, 'index'])->name('donate');
 Route::redirect('/event', 'https://truckersmp.com/events/3553');
 Route::redirect('/discord', 'https://discord.gg/hbwQ6hHvDT');
 Route::redirect('/twitter', 'https://twitter.com/ct_convoy');
+Route::redirdct('/hunt', 'https://forms.gle/dMEgvuZZydhr6UeG7');
 
 Route::get('/apply/{application:route}', [ApplyController::class, 'show'])->name('application');
 
