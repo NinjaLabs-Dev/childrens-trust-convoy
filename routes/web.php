@@ -37,6 +37,7 @@ Route::redirect('/event', 'https://truckersmp.com/events/3553');
 Route::redirect('/discord', 'https://discord.gg/hbwQ6hHvDT');
 Route::redirect('/twitter', 'https://twitter.com/ct_convoy');
 Route::redirect('/hunt', 'https://forms.gle/dMEgvuZZydhr6UeG7');
+Route::redirect('/twitch', 'https://www.twitch.tv/childrenstrustconvoy_');
 
 Route::get('/apply/{application:route}', [ApplyController::class, 'show'])->name('application');
 
