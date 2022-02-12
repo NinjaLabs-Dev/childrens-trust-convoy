@@ -54,8 +54,8 @@ class CheckDonationsCommand extends Command
                 $donation = new Donation;
                 $donation->donation_id = $donationData['id'];
                 $donation->donation_name = $donationData['donorDisplayName'];
-                $donation->donation_amount = round((float)$donationData['donorLocalAmount'], 2);
-                $donation->donation_country_code = $donationData['donorLocalCurrencyCode'];
+                $donation->donation_amount = isset($donationData['donorLocalAmount']) ? round((float)$donationData['donorLocalAmount'], 2) : 0;
+                $donation->donation_country_code = isset($donationData['donorLocalCurrencyCode']) ? $donationData['donorLocalCurrencyCode'] : '?';
                 $donation->donation_message = empty($donationData['message']) ? 'No Message' : $donationData['message'];
                 $donation->raisedPercent = $page['totalRaisedPercentageOfFundraisingTarget'];
                 $donation->raisedTotal = $page['grandTotalRaisedExcludingGiftAid'];
