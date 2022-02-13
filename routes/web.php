@@ -12,7 +12,9 @@ use App\Http\Controllers\Pages\DonateController,
     App\Http\Controllers\Resources\ApplicationController,
     App\Http\Controllers\Dashboard\Pages\DashboardController,
     App\Http\Controllers\Dashboard\Resources\SlotManagementController,
-    App\Http\Controllers\Dashboard\Resources\RouteManagementController;
+    App\Http\Controllers\Dashboard\Resources\RouteManagementController,
+    App\Http\Controllers\Pages\MediaController,
+    App\Http\Controllers\Resources\MediaManagementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,7 @@ Route::get('/routes', [RouteController::class, 'index'])->name('routes');
 //Route::get('/route/{route:number}/image', [RouteImageController::class, 'index'])->name('route-image');
 Route::get('/route/{route:number}', [RouteController::class, 'show'])->name('route');
 Route::get('/slots', [SlotController::class, 'index'])->name('slots');
+Route::get('/media', [MediaController::class, 'index'])->name('media');
 //Route::get('/slot/{slot:number}/image', [SlotImageController::class, 'index'])->name('slot-image');
 Route::get('/apply', [ApplyController::class, 'index'])->name('apply');
 Route::get('/donate', [DonateController::class, 'index'])->name('donate');
@@ -45,6 +48,8 @@ Route::prefix('api')->group(static function() {
     Route::post('application/{application:id}', [ApplicationController::class, 'store']);
 
     Route::post('slot-management/{slot:id}', [SlotManagementController::class, 'update']);
+    Route::post('media-management', [MediaManagementController::class, 'store']);
+    Route::delete('media-management/{media:id}', [MediaManagementController::class, 'destroy']);
     Route::post('route-management/{route:id}', [RouteManagementController::class, 'update']);
 });
 

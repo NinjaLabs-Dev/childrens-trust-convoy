@@ -4,6 +4,7 @@
 <div class="row mt-4">
     <div class="col-xl-6">
         <slot-management :slots="{{ json_encode($slots) }}"></slot-management>
+        <media-management></media-management>
     </div>
 
     <div class="col-xl-6">

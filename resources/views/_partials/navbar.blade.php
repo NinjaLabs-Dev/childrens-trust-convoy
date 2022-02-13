@@ -20,9 +20,13 @@
                 <div class="nav-end col-xl-8 justify-content-end">
                     <div class="nav-items">
                         <x-nav-item name="Home" route="home"></x-nav-item>
+                        <x-nav-item name="Media" route="media"></x-nav-item>
                         <x-nav-item name="Routes" route="routes"></x-nav-item>
                         <x-nav-item name="Slots" route="slots"></x-nav-item>
                         <x-nav-item name="Apply" route="apply"></x-nav-item>
+                        @auth
+                            <x-nav-item name="Staff" route="dashboard"></x-nav-item>
+                        @endauth
                     </div>
                     <div class="cta">
                         <a href="{{ route('donate') }}" class="donate-button">
@@ -32,6 +36,7 @@
 
                     @auth
                         <form action="/logout" method="POST">
+                            @csrf
                             <button class="btn btn-danger mx-4" type="submit">Logout</button>
                         </form>
                     @endauth
