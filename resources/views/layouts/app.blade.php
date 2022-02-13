@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Children's Trust Convoy | @yield('title')</title>
 
-    <link rel="preload" href="{{ asset('css/app.css') }}" as="style">
-    <link rel="preload" href="{{ asset('js/app.js') }}" as="script">
+    <link rel="preload" href="{{ mix('css/app.css') }}" as="style">
+    <link rel="preload" href="{{ mix('js/app.js') }}" as="script">
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
     <div class="container-fluid" id="app">
@@ -24,6 +24,6 @@
     </div>
 </body>
 
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ mix('js/app.js') }}"></script>
 @yield('scripts')
 </html>
