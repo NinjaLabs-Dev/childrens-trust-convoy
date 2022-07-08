@@ -28,7 +28,7 @@
     "dependencies": {
         "boxicons": "^2.0.9",
         "element-ui": "^2.15.5",
-        "moment": "^2.29.1",
+        "moment": "^2.29.4",
         "moment-timezone": "^0.5.33",
         "v-tooltip": "^3.0.0-beta.1",
         "vue-apexcharts": "^1.6.2"
