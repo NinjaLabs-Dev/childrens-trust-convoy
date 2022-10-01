@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Slot extends Model
 {
     protected $fillable = [
-        'number',
+        'name',
         'capacity',
         'public',
         'image',
@@ -15,7 +15,7 @@ class Slot extends Model
     ];
 
     public function getImageUrl() {
-        return route('slot-image', $this->number);
+        return route('slot-image', $this->name);
     }
 
 }

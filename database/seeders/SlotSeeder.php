@@ -11,98 +11,98 @@ class SlotSeeder extends Seeder
     {
         $slots = [
             [
-                'number' => 0,
+                'name' => 'Hotel',
                 'capacity' => null,
                 'public' => true,
-                'image' => 'https://i.imgur.com/ScOGgxV.jpg',
+                'image' => 'https://i.imgur.com/T1DSuGd.png',
             ],
             [
-                'number' => 1,
+                'name' => 'Sybse',
                 'capacity' => 20,
-                'image' => 'https://i.imgur.com/SmnIWlW.jpg',
+                'image' => 'https://i.imgur.com/KbIfJZp.png',
             ],
             [
-                'number' => 2,
+                'name' => 'ACC',
                 'capacity' => 20,
-                'image' => 'https://i.imgur.com/I1z4x3S.jpg',
+                'image' => 'https://i.imgur.com/aNkOBZ8.png',
             ],
             [
-                'number' => 3,
+                'name' => 'Cargotras',
                 'capacity' => 10,
-                'image' => 'https://i.imgur.com/tusYRdh.jpg',
+                'image' => 'https://i.imgur.com/AUh77dP.png',
             ],
             [
-                'number' => 4,
+                'name' => 'Bus Station',
                 'capacity' => 10,
                 'image' => 'https://i.imgur.com/TWGq74Q.jpg',
             ],
             [
-                'number' => 5,
+                'name' => 'Parking Area',
                 'capacity' => 5,
-                'image' => 'https://i.imgur.com/pOD5Sip.jpg',
+                'image' => 'https://i.imgur.com/AUh77dP.png',
             ],
             [
-                'number' => 6,
+                'name' => 'Trameri',
                 'capacity' => 10,
-                'image' => 'https://i.imgur.com/EmOS3Of.jpg',
+                'image' => 'https://i.imgur.com/ZAGSAWq.png',
             ],
             [
-                'number' => 7,
+                'name' => 'Stokes',
                 'capacity' => 5,
-                'image' => 'https://i.imgur.com/hT3FRfW.jpg',
+                'image' => 'https://i.imgur.com/KbIfJZp.png',
             ],
             [
-                'number' => 8,
+                'name' => 'Garage',
                 'capacity' => 5,
-                'image' => 'https://i.imgur.com/5dVPBcz.jpg',
+                'image' => 'https://i.imgur.com/0xW6fkj.png',
             ],
             [
-                'number' => 9,
+                'name' => 'Kaarfor',
                 'capacity' => 10,
-                'image' => 'https://i.imgur.com/lb2KVuT.jpg',
+                'image' => 'https://i.imgur.com/SI77dTR.png',
             ],
             [
-                'number' => 10,
+                'name' => 'TruckersMP HQ',
                 'capacity' => 5,
-                'image' => 'https://i.imgur.com/CcsCvKC.jpg',
+                'image' => 'https://i.imgur.com/K2GJ5pX.png',
             ],
             [
-                'number' => 11,
+                'name' => 'eAcres',
                 'capacity' => 5,
-                'image' => 'https://i.imgur.com/PuR6k2E.jpg',
+                'image' => 'https://i.imgur.com/cLyPSs6.png',
             ],
             [
-                'number' => 12,
+                'name' => '12',
                 'capacity' => 15,
                 'image' => 'https://i.imgur.com/dh9V3wl.jpg',
             ],
             [
-                'number' => 13,
+                'name' => '13',
                 'capacity' => 10,
                 'image' => 'https://i.imgur.com/ZWNxsu3.jpg',
             ],
             [
-                'number' => 14,
+                'name' => '14',
                 'capacity' => 10,
                 'image' => 'https://i.imgur.com/8NE6Szo.jpg',
             ],
             [
-                'number' => 15,
+                'name' => '15',
                 'capacity' => 10,
                 'image' => 'https://i.imgur.com/Bh1HOfb.jpg',
             ],
             [
-                'number' => 16,
+                'name' => '16',
                 'capacity' => 10,
                 'image' => 'https://i.imgur.com/8WrL5H9.jpg',
             ],
             [
-                'number' => 17,
+                'name' => '17',
                 'capacity' => 10,
                 'image' => 'https://i.imgur.com/P3UKohi.jpg',
             ],
             [
-                'number' => 18,
+                'name' => '18',
                 'capacity' => 10,
                 'image' => 'https://i.imgur.com/oRAckhP.jpg',
             ],
@@ -110,7 +110,7 @@ class SlotSeeder extends Seeder
 
         foreach ($slots as $slot) {
             $s = new Slot;
-            $s->number = $slot['number'];
+            $s->name = $slot['name'];
             $s->public = $slot['public'] ?? false;
             $s->capacity = $slot['capacity'];
             $s->image = $slot['image'];

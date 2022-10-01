@@ -64,28 +64,7 @@ class RouteSeeder extends Seeder
                 'start_time' => 1644721200,
                 'end' => 'Innsbruck',
                 'image' => 'https://i.imgur.com/WsaM7Jf.jpg'
-            ],
-            [
-                'number' => 7,
-                'start' => 'Innsbruck',
-                'start_time' => 1644728400,
-                'end' => 'Livorno',
-                'image' => 'https://i.imgur.com/6dFqntY.jpg'
-            ],
-            [
-                'number' => 8,
-                'start' => 'Livorno',
-                'start_time' => 1644741000,
-                'end' => 'Bayonne',
-                'image' => 'https://i.imgur.com/FrMqNaI.jpg'
-            ],
-            [
-                'number' => 9,
-                'start' => 'Bavonne',
-                'start_time' => 1644750000,
-                'end' => 'Cordoba',
-                'image' => 'https://i.imgur.com/KNlUrlt.png'
-            ],
+            ]
         ];
 
         foreach ($routes as $route) {

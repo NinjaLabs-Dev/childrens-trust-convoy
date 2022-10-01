@@ -37,7 +37,7 @@ export default {
                 return slot.vtc
             }
 
-            return `Slot ${slot.number}`
+            return slot.name
         },
 
         slotTaken(slot) {

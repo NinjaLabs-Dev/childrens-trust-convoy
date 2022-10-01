@@ -10,7 +10,7 @@ class CreateSlotsTable extends Migration
     {
         Schema::create('slots', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('number');
+            $table->string('name');
             $table->boolean('public')->default(false);
             $table->integer('capacity')->nullable();
             $table->boolean('vacant')->default(true);

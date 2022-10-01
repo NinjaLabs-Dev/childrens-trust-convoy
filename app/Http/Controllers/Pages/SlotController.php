@@ -9,7 +9,7 @@ class SlotController extends Controller
 {
     public function index()
     {
-        $slots = Slot::orderBy('number')->get();
+        $slots = Slot::orderBy('name')->get();
 
         return view('pages.slots')->with('slots', $slots);
     }

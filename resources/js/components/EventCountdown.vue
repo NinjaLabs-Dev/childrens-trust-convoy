@@ -1,6 +1,6 @@
 <template>
     <div class="countdown" :class="{'d-flex align-items-center justify-content-center': slim}">
-        <p class="mb-0" :class="{'mr-2': slim}">{{ event.truckfest ? 'Event' : `Route ${event.number}`  }} Countdown:</p>
+        <p class="mb-0" :class="{'mr-2': slim}">{{ event.truckfest ? 'Event' : event.name  }} Countdown:</p>
         <p class="mb-0">{{ countdown }}</p>
     </div>
 </template>

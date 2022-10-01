@@ -7,7 +7,7 @@
                 :height="imgHeight"
                 @change="changeRoute">
                 <el-carousel-item v-for="route in routes" :key="route.id">
-                    <img class="route-image" :src="route.image" :alt="`Route ${route.number} Image`">
+                    <img class="route-image" :src="route.image" :alt="`${route.name} Image`">
                 </el-carousel-item>
             </el-carousel>
         </div>
