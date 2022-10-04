@@ -29,7 +29,7 @@ class ApplyController extends Controller
             return abort(404);
         }
 
-        $slots = Slot::where('vacant', true)->where('public', false)->orderBy('number')->get();
+        $slots = Slot::where('vacant', true)->where('public', false)->orderBy('name')->get();
 
         return view($view)->with('application', $application)->with('slots', $slots);
     }
