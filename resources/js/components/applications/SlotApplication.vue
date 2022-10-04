@@ -33,7 +33,7 @@
                     <el-option
                         v-for="item in slots"
                         :key="item.id"
-                        :label="`Slot ${item.number}`"
+                        :label="slot.number"
                         :value="item.id">
                     </el-option>
                 </el-select>
