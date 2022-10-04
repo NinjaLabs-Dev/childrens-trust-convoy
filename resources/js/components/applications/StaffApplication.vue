@@ -102,9 +102,6 @@
                             <el-checkbox label="Route 5" name="type" :disabled="form.custom.routes.includes('All')"></el-checkbox>
                             <br>
                             <el-checkbox label="Route 6" name="type" :disabled="form.custom.routes.includes('All')"></el-checkbox>
-                            <el-checkbox label="Route 7" name="type" :disabled="form.custom.routes.includes('All')"></el-checkbox>
-                            <el-checkbox label="Route 8" name="type" :disabled="form.custom.routes.includes('All')"></el-checkbox>
-                            <el-checkbox label="Route 9" name="type" :disabled="form.custom.routes.includes('All')"></el-checkbox>
                             <el-checkbox label="All" name="type"></el-checkbox>
                         </el-checkbox-group>
                     </el-form-item>
