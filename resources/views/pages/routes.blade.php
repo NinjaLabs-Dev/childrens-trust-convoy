@@ -10,7 +10,6 @@
                     <div class="titles text-center my-2">
                         <h2>Convoy Routes</h2>
                         <p class="mt-2">Below is all of our 6 routes, visiting many major ports throughout Europe, and seeing some awe-inspiring views of the stunning countries we'll visit. With DLC and Base Map routes available, we've ensured as many people as possible can attend, and we can't wait to see you there!</p>
-                        <p class="mt-1">Support the Cause can stay the same, and the new JustGiving link will be posted here in a few moments.</p>
                     </div>
                     <div class="action-buttons d-flex justify-content-center align-items-center mb-4">
                         <a href="{{ route('donate') }}">
