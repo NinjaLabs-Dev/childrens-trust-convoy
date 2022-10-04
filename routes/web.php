@@ -36,7 +36,7 @@ Route::get('/media', [MediaController::class, 'index'])->name('media');
 //Route::get('/slot/{slot:number}/image', [SlotImageController::class, 'index'])->name('slot-image');
 Route::get('/apply', [ApplyController::class, 'index'])->name('apply');
 Route::get('/donate', [DonateController::class, 'index'])->name('donate');
-Route::redirect('/event', 'https://truckersmp.com/events/3553');
+Route::redirect('/event', 'https://truckersmp.com/events/10585');
 Route::redirect('/discord', 'https://discord.gg/hbwQ6hHvDT');
 Route::redirect('/twitter', 'https://twitter.com/ct_convoy');
 Route::redirect('/hunt', 'https://forms.gle/dMEgvuZZydhr6UeG7');
