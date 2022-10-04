@@ -6,7 +6,7 @@
         <el-form>
             <el-form-item label="Slot">
                 <el-select v-model="form.slot" placeholder="Slot" @change="slotChange($event)">
-                    <el-option v-for="(slot, i) in slots" :key="i" :label="`Slot ${slot.name}`" :value="i">Slot {{ slot.name }}</el-option>
+                    <el-option v-for="(slot, i) in slots" :key="i" :label="slot.name" :value="i"></el-option>
                 </el-select>
             </el-form-item>
 
