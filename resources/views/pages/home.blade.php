@@ -9,7 +9,7 @@
                 <div class="col-xl-6 content-left">
                     <div class="titles">
                         <h2>Raising Money for The Children's Trust</h2>
-                        <p class="mt-2">Over 24 hours of driving through Scandinavia, Eastern Europe, The Baltic's, The Black Sea, Italy, France, and Iberia raising money for children in need</p>
+                        <p class="mt-2">Over 12 hours we'll be driving through Austria, Italy, Spain, England, Scandinavia, The Baltics and much, much more, exploring the ferry ports of Europe raising money for children with brain injury</p>
                     </div>
                     <div class="action-buttons">
                         <a href="{{ route('donate') }}">
