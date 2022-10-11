@@ -32,7 +32,7 @@ class ApplicationController extends Controller
             case 'slot':
                 $validatorRules['drivers'] = 'required';
                 $validatorRules['name'] = 'required';
-                $validatorRules['slot'] = 'required|exists:slots,id';
+                $validatorRules['slot'] = 'required|exists:slots,name';
                 $validatorRules['tmp'] = 'required';
                 break;
             case 'staff':
